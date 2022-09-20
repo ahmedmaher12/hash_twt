@@ -1,4 +1,4 @@
-update_version = 6
+update_version = 7
 import json
 import requests
 import random
@@ -23,7 +23,7 @@ class bcolors:
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-print(f'{bcolors.HEADER}[*] Script version ===> [3.0]{bcolors.BOLD}')
+print(f'{bcolors.HEADER}[*] Script version ===> [3.1]{bcolors.BOLD}')
 print(f'{bcolors.OKGREEN}[*] Now I ComeBack{bcolors.BOLD}')
 time.sleep(2)
 print(
