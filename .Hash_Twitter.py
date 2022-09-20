@@ -1,4 +1,4 @@
-    update_version = 4
+    update_version = 0.1
     import json
     import requests
     import random
@@ -753,7 +753,7 @@
                 print(f'{bcolors.WARNING}[*] Admins close Script{bcolors.BOLD}')
                 sys.exit()
     #update github
-            url = 'https://raw.githubusercontent.com/ahmedmaher12/testscript/main/.hash_twitterV0.1?token=GHSAT0AAAAAABY7ESDEJWUVXAR45JYFV77AYZJHZMA'
+            url = 'https://raw.githubusercontent.com/ahmedmaher12/hash_twt/main/.Hash_Twitter.py'
 
             while 1:
                 a = '.' * i
