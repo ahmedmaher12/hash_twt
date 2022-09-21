@@ -1,4 +1,4 @@
-update_version = 4
+update_version = 10
 import json
 import requests
 import random
@@ -23,7 +23,7 @@ class bcolors:
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-print(f'{bcolors.HEADER}[*] Script version ===> [3.1]{bcolors.BOLD}')
+print(f'{bcolors.HEADER}[*] Script version ===> [3.2]{bcolors.BOLD}')
 print(f'{bcolors.OKGREEN}[*] Now I ComeBack{bcolors.BOLD}')
 time.sleep(2)
 print(
@@ -33,7 +33,7 @@ print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغف�
 #Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
 #data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-Hashtag = '#انترنت_غير_محدود_في_مصر'
+Hashtag = '#انترنت_غير_محدود'
 
 script_state = 'Run'
 
@@ -738,7 +738,7 @@ while 1:
        # Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
        # data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-        Hashtag = '#انترنت_غير_محدود_في_مصر'
+        Hashtag = '#انترنت_غير_محدود'
 
         script_state = 'Run'
 
