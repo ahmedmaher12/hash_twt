@@ -1,4 +1,4 @@
-update_version = 3
+update_version = 4
 import json
 import requests
 import random
@@ -23,7 +23,7 @@ class bcolors:
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-print(f'{bcolors.HEADER}[*] Script version ===> [2.8]{bcolors.BOLD}')
+print(f'{bcolors.HEADER}[*] Script version ===> [2.9]{bcolors.BOLD}')
 print(f'{bcolors.OKGREEN}[*] Now I ComeBack{bcolors.BOLD}')
 time.sleep(2)
 print(
@@ -1157,6 +1157,6 @@ while 1:
 
         number_of_tweet += 1
 
-        Timer_Countdown = random.randint(15, 25)
+        Timer_Countdown = random.randint(20, 25)
 
     time.sleep(1)
