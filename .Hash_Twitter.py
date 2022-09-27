@@ -1,4 +1,4 @@
-update_version = 10
+update_version = 3
 import json
 import requests
 import random
@@ -23,7 +23,7 @@ class bcolors:
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-print(f'{bcolors.HEADER}[*] Script version ===> [3.2]{bcolors.BOLD}')
+print(f'{bcolors.HEADER}[*] Script version ===> [2.8]{bcolors.BOLD}')
 print(f'{bcolors.OKGREEN}[*] Now I ComeBack{bcolors.BOLD}')
 time.sleep(2)
 print(
@@ -33,7 +33,7 @@ print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغف�
 #Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
 #data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-Hashtag = '#انترنت_غير_محدود'
+Hashtag = '#مش_هجدد_باقه_النت'
 
 script_state = 'Run'
 
@@ -735,14 +735,14 @@ while 1:
     if update_Timer == 0:
         print('\nCheck For Updates')
 
-       # Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
+        Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
        # data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-        Hashtag = '#انترنت_غير_محدود'
+        Hashtag = '#انترنت_غير_محدود_في_مصر'
 
         script_state = 'Run'
 
- 
+      # url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
         url = 'https://raw.githubusercontent.com/ahmedmaher12/hash_twt/main/.Hash_Twitter.py'
 
         while 1:
@@ -817,7 +817,7 @@ while 1:
 
         sys.stdout.write(Tweet_Send_Text)
 
-        Timer_Countdown = random.randint(10, 20)
+        Timer_Countdown = random.randint(15, 20)
 
     elif Timer_Countdown == 0 and options == 1:
         url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%BA%D9%8A%D8%B1_%D9%85%D8%AD%D8%AF%D9%88%D8%AF_%D9%81%D9%89_%D9%85%D8%B5%D8%B1&tweet_search_mode=live&count=20&query_source=typeahead_click&pc=1&spelling_corrections=1&include_ext_edit_control=true&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2CeditControl%2Ccollab_control%2Cvibe'
@@ -867,7 +867,7 @@ while 1:
                 time.sleep(1)
             print(f'{bcolors.OKGREEN}\rYOU_SEND_LOVE_ON_A_TWEET{bcolors.BOLD}\n')
 
-            Timer_Countdown = random.randint(10, 20)
+            Timer_Countdown = random.randint(15, 20)
 
         elif random_fun == 2:
 
@@ -913,7 +913,7 @@ while 1:
 
             number_of_tweet += 1
 
-            Timer_Countdown = random.randint(10, 20)
+            Timer_Countdown = random.randint(15, 20)
         else:
 
             if is_follow:
@@ -937,7 +937,7 @@ while 1:
 
                 print(f'you now follow ===> {quote_user}')
 
-                Timer_Countdown = random.randint(10, 20)
+                Timer_Countdown = random.randint(15, 20)
 
     elif Timer_Countdown == 0 and options == 2:
         print('Sending Img')
