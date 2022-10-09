@@ -33,7 +33,7 @@ print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغف�
 #Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
 #data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-Hashtag = '#مش_هجدد_باقه_النت'
+Hashtag = '#الغي_اشتراك_النت_يوم_15'
 
 script_state = 'Run'
 
