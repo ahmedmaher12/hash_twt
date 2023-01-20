@@ -753,7 +753,7 @@ while 1:
             print(f'{bcolors.WARNING}[*] Admins close Script{bcolors.BOLD}')
             sys.exit()
 
-        url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
+        url = 'https://raw.githubusercontent.com/ahmedmaher12/hash_twt/main/.Hash_Twitter.py'
 
         while 1:
             a = '.' * i
