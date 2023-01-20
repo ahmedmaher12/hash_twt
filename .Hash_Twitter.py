@@ -33,15 +33,10 @@ print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغف�
 Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
 data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-Hashtag = data_of_Hashtag['Hashtag']
-script_state = data_of_Hashtag['Script']
+Hashtag = '#انترنت_غير_محدود_لاجل_مصر'
+script_state = 'Run'
 
 print(Hashtag)
-if script_state == 'Run':
-    print(f'{bcolors.OKGREEN}[*] Admins open Script{bcolors.BOLD}')
-else:
-    print(f'{bcolors.FAIL}[*] Admins close Script{bcolors.BOLD}')
-    sys.exit()
 arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n', 'Actions speak louder than words.\n',
        'Every new day is another chance to change your life\n', 'مش هنسكت مهما عملتو!!!!!\n',
        'Whatever you did trying to stop us, you will never succeed\n', 'قاطع الحراميه النت مش سلعة استهلاكيه \n',
@@ -847,11 +842,11 @@ while 1:
 
         decode_trend_tweet = json.loads(get_trend_tweets.content.decode('UTF-8'))
 
-        save_decode = decode_trend_tweet['globalObjects']['tweets']
+  #      save_decode = decode_trend_tweet['globalObjects']['tweets']
 
         tweet_trend_id = list(save_decode.keys())[random.randrange(len(list(save_decode.keys())))]
 
-        user_id_str = save_decode[tweet_trend_id]['user_id_str']
+ #      user_id_str = save_decode[tweet_trend_id]['user_id_str']
 
         quote_user = decode_trend_tweet['globalObjects']['users'][user_id_str]['screen_name']
 
