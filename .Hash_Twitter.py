@@ -1,4 +1,4 @@
-update_version = 4
+update_version = 1
 import json
 import requests
 import random
@@ -11,7 +11,7 @@ import urllib3
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m' 
+    OKCYAN = '\033[96m'
     OKGREEN = '\033[92m'
     WARNING = '\033[93m'
     FAIL = '\033[91m'
@@ -23,20 +23,25 @@ class bcolors:
 
 Auto_Login_Email = ''
 Auto_Login_PASSWORD = ''
-print(f'{bcolors.HEADER}[*] Script version ===> [2.9]{bcolors.BOLD}')
+print(f'{bcolors.HEADER}[*] Script version ===> [2.8]{bcolors.BOLD}')
 print(f'{bcolors.OKGREEN}[*] Now I ComeBack{bcolors.BOLD}')
 time.sleep(2)
 print(
     f'{bcolors.WARNING} لو في اي مشكلة في الاسكريبت ابعت علي جروب احنا شايفنكوا و معاكوا و هنفضل ديما معاكوا [*] {bcolors.BOLD}')
 print('[*] لو مش هياخد من وقتك حاجة ف ياريت تستغفر ربنا و لو ينفع ف ممكن تدعيلي و شكرا ليك')
 
-#Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
-#data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
+Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
+data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-Hashtag = '#انترنت_غير_محدود_لاجل_مصر'
+Hashtag = data_of_Hashtag['Hashtag']
+script_state = data_of_Hashtag['Script']
 
-script_state = 'Run'
-
+print(Hashtag)
+if script_state == 'Run':
+    print(f'{bcolors.OKGREEN}[*] Admins open Script{bcolors.BOLD}')
+else:
+    print(f'{bcolors.FAIL}[*] Admins close Script{bcolors.BOLD}')
+    sys.exit()
 arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n', 'Actions speak louder than words.\n',
        'Every new day is another chance to change your life\n', 'مش هنسكت مهما عملتو!!!!!\n',
        'Whatever you did trying to stop us, you will never succeed\n', 'قاطع الحراميه النت مش سلعة استهلاكيه \n',
@@ -58,7 +63,7 @@ arr = ['A year from now you may wish you had started today.\n', 'Keep going.\n',
        'انا على اخري حقيقي\n',
        'مصلحتنا في انترنت سريع غير محدود و موفر يخدم اهداف الجمتمع المصري في كل المجالات سواء تعليمية او ترفيهية او تجارية او عملية النت اصبح ضرورة اساسية مش ثانوية\n',
        'مش عايزين ده يقع\n', 'يارب يفضل مركز اول\n',
-       "Don't stop asking for ur rights u can change the future keep fighting like a wirror this is ur war and u can win it and u will win it\n",
+      "Don't stop asking for ur rights u can change the future keep fighting like a wirror this is ur war and u can win it and u will win it\n",
        'لازم نهد المعبد علي دماغهم\n', 'We can win this\n', 'مش هنوقف مهما حصل عشان الكل جاب اخره\n',
        'بلاش احتكار وخلوا الناس تاخد حقها\n',
        'مكمل معاكم شاحن كرت ب ١٠ جنيه ومش هجدد الباقة لما نشوف آخرهم معانا ايه\n',
@@ -387,7 +392,7 @@ else:
 
 print(f'{bcolors.OKGREEN}USER_FIND{bcolors.BOLD}')
 
-flow_toke = flow_toke[:-1] + '5'
+flow_toke = flow_toke[:-1] + '8'
 
 if os.path.exists('Twitter_login.txt'):
     file = open('Twitter_login.txt', 'r')
@@ -497,7 +502,7 @@ else:
             break
         print(f'{bcolors.FAIL}Write a correct password{bcolors.BOLD}')
 
-flow_toke = flow_toke[:-1] + '6'
+flow_toke = flow_toke[:-1] + '11'
 
 print(f'{bcolors.OKGREEN}Password is correct{bcolors.BOLD}')
 
@@ -724,7 +729,7 @@ sys.stdout.write('\r' + Tweet_Send_Text + '\n')
 
 update_Timer = 121
 
-Timer_Countdown = random.randrange(1, 10)
+Timer_Countdown = random.randrange(30, 45)
 
 options = 0
 while 1:
@@ -736,14 +741,19 @@ while 1:
         print('\nCheck For Updates')
 
         Hashtag_res = requests.get('https://hashtag-changer-default-rtdb.firebaseio.com/save_hashtag.json')
-       # data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
+        data_of_Hashtag = json.loads(Hashtag_res.content.decode('UTF-8'))
 
-        Hashtag = '#انترنت_غير_محدود_في_مصر'
+        Hashtag = data_of_Hashtag['Hashtag']
+        script_state = data_of_Hashtag['Script']
 
-        script_state = 'Run'
+        print(Hashtag)
+        if script_state == 'Run':
+            print(f'{bcolors.WARNING}[*] Admins open Script{bcolors.BOLD}')
+        else:
+            print(f'{bcolors.WARNING}[*] Admins close Script{bcolors.BOLD}')
+            sys.exit()
 
-      # url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
-        url = 'https://raw.githubusercontent.com/ahmedmaher12/hash_twt/main/.Hash_Twitter.py'
+        url = 'https://raw.githubusercontent.com/AbdelrhmanX7/test-send/main/Hash_Twitter.py'
 
         while 1:
             a = '.' * i
@@ -817,7 +827,7 @@ while 1:
 
         sys.stdout.write(Tweet_Send_Text)
 
-        Timer_Countdown = random.randint(15, 20)
+        Timer_Countdown = random.randint(30, 40)
 
     elif Timer_Countdown == 0 and options == 1:
         url = 'https://twitter.com/i/api/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_has_nft_avatar=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_ext_collab_control=true&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&include_ext_sensitive_media_warning=true&include_ext_trusted_friends_metadata=true&send_error_codes=true&simple_quoted_tweet=true&q=%23%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%BA%D9%8A%D8%B1_%D9%85%D8%AD%D8%AF%D9%88%D8%AF_%D9%81%D9%89_%D9%85%D8%B5%D8%B1&tweet_search_mode=live&count=20&query_source=typeahead_click&pc=1&spelling_corrections=1&include_ext_edit_control=true&ext=mediaStats%2ChighlightedLabel%2ChasNftAvatar%2CvoiceInfo%2Cenrichments%2CsuperFollowMetadata%2CunmentionInfo%2CeditControl%2Ccollab_control%2Cvibe'
@@ -867,7 +877,7 @@ while 1:
                 time.sleep(1)
             print(f'{bcolors.OKGREEN}\rYOU_SEND_LOVE_ON_A_TWEET{bcolors.BOLD}\n')
 
-            Timer_Countdown = random.randint(15, 20)
+            Timer_Countdown = random.randint(10, 20)
 
         elif random_fun == 2:
 
@@ -913,7 +923,7 @@ while 1:
 
             number_of_tweet += 1
 
-            Timer_Countdown = random.randint(15, 20)
+            Timer_Countdown = random.randint(30, 40)
         else:
 
             if is_follow:
@@ -937,7 +947,7 @@ while 1:
 
                 print(f'you now follow ===> {quote_user}')
 
-                Timer_Countdown = random.randint(15, 20)
+                Timer_Countdown = random.randint(10, 20)
 
     elif Timer_Countdown == 0 and options == 2:
         print('Sending Img')
@@ -1157,6 +1167,6 @@ while 1:
 
         number_of_tweet += 1
 
-        Timer_Countdown = random.randint(20, 25)
+        Timer_Countdown = random.randint(30, 40)
 
     time.sleep(1)
